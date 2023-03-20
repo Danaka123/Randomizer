@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #9d2edd;
+  padding-top: 100px;
+}
+
+.number-generator__parameters{
+  width: 300px;
+}
+.parameter{
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.radio__input{
+  position: relative;
+  opacity: 0;
+}
+.radio__label{
+  font-size: 16px;
+  padding-left: 30px;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio__label::before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  z-index: 5;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(195,190,190);
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color .2s, border .2s;
+}
+
+.radio__label::after{
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  z-index: 10;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #000000;
+  opacity: 0;
+  transition: opacity .2s;
+}
+
+.radio__input:checked + .radio__label::before{
+  border: 1px solid #000;
+}
+.radio__input:checked + .radio__label::after{
+  border: 1px solid #000;
+  opacity: 1;
+}
+
+.number-generator__container {
+  height: 100%;
+  width: 30%;
+  margin: 0 auto;
+  background: #ffffff;
+  height: 600px;
+  /* margin-top: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #0000008e;
+  border-radius: 30px;
+}
+.number-generator__random {
+  font-size: 30px;
+}
+.number-generator__number {
+  font-size: 80px;
+  margin: 50px 0;
+}
+.number-generator__parameters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range{
+  margin: 20px 0;
+}
+
+.min-number, .max-number{
+  width: 100px;
+  height: 40px;
+  border: 1px solid #b3b3b3;
+  font-size: 16px;
+  padding-left: 10px;
+  outline: transparent;
+  margin: 0 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+.list-numbers{
+  width: 300px;
+  height: 100px;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 30px;
+  opacity: 1;
+}
+
+.btn{
+  user-select: none;
+  min-width: 300px;
+  min-height: 50px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #000;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.disable{
+  pointer-events: none;
+}
